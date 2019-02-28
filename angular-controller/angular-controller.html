@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+      <title>Angular Controller</title>
+  <style>
+      .app-container {
+         display: block;
+         width: 100%;
+         height: auto;
+         background-color: #ccc;
+      }
+  </style>
+  </head>
+  <body ng-app="app">
+     <div class="app-container" ng-controller = "AppController as ctrl">
+         <p>Angular Controller</p>
+         <label for = "messageInput">Please input your message: </label>
+         <input ng-model = "ctrl.message" name = "messageInput"/>
+         <div> Receive: {{ ctrl.message }}</div>
+     </div>
+     <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+     <script>
+        var app = angular.module('app', []);
+        app.controller('AppController', function() {
+           // init the message 
+           var ctrl = this;
+           ctrl.message = "first message !";
+        });
+     </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+      <title>Angular data binding</title>
+  </head>
+  <body ng-app="app">
+     <p>Angular data binding</p>
+     <label for = "messageInput">Please input your message: </label>
+     <input ng-model="message" name="messageInput"/>
+     <div> Receive: {{message}}</div>
+     <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+     <script>
+        var app = angular.module('app', []);
+     </script>
+  </body>
+</html>
