@@ -17,16 +17,22 @@
  ### Controller 
    * register controller with angular module 
    angular.module('moduleName', []).controller('controllerName', function() {}); 
-   * $scope 
-   `angular.module('moduleName',[]).controller('appController', function($scope) {
-        $scope.message = "***";
-    });
+   * $scope
+
+      angular.module('moduleName',[]).controller('appController', function($scope) {
+          $scope.message = "***";
+      });
+
       <div ng-controller="appController">
-         <span>{{ message }}</span>
-      </div>`
+          <span>{{ message }}</span>
+      </div>
+      
    * controller as syntax after version 1.2
-      `ng-controller = "appController as ctrl"
+
+      ng-controller = "appController as ctrl"
+
        angular.module('app', []).controller('appController', function() {
          var ctrl = this;  //important
-       });`
+       });
+       
    
